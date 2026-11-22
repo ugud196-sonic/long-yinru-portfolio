@@ -1,0 +1,1 @@
+const accountsDialog=document.getElementById('accounts');document.getElementById('accountsNav').onclick=()=>{document.getElementById('film').pause();accountsDialog.showModal()};document.getElementById('closeAccounts').onclick=()=>accountsDialog.close();
