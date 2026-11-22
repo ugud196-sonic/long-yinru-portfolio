@@ -36,13 +36,3 @@ $('#fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await docum
 
 window.galleryBridge={open:openWork,stop:()=>stop,swiped:()=>swiped,go,play:toggleProjection};
 
-window.addEventListener('load', () => {
-  const intro = document.getElementById('galleryIntro');
-  // Let the first exhibition frame paint before starting the title hold.
-  requestAnimationFrame(() => requestAnimationFrame(() => {
-    setTimeout(() => {
-      intro.classList.add('leaving');
-      setTimeout(() => intro.remove(), reduce.matches ? 0 : 220);
-    }, reduce.matches ? 0 : 100);
-  }));
-}, {once:true});
